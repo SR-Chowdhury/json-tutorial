@@ -58,3 +58,74 @@ _Why undefined, because person_JSON is not an object_
 	console.log(person_Obj.age); // 29
 _Now we can access age properties because person_Obj is an object now._
 
+**Now array to Object**
+
+	let user_Array = `[
+	    {
+		"id" : 1,
+		"title" : "Executive",
+		"company" : "Google" 
+	    },    
+	    {
+		"id" : 2,
+		"title" : "Sr. Executive",
+		"company" : "Facebook" 
+	    },
+	    {
+		"id" : 3,
+		"title" : "Manager",
+		"company" : "Youtube" 
+	    }
+	]`
+	console.log(typeof user_Array); //String
+	let user_JSON = JSON.parse(user_Array);
+
+	console.log(typeof user_JSON); // Object
+	console.log(user_JSON[0].title); // Executive
+
+
+**__Now receive/import JSON data from another file__**
+
+**exportJSON-data.json**
+
+	[
+	    {
+		"id" : 1,
+		"title" : "Executive",
+		"company" : "Google" 
+	    },    
+	    {
+		"id" : 2,
+		"title" : "Sr. Executive",
+		"company" : "Facebook" 
+	    },
+	    {
+		"id" : 3,
+		"title" : "Manager",
+		"company" : "Youtube" 
+	    },
+	    {
+		"id" : 4,
+		"title" : "Sr. Manager",
+		"company" : "Google" 
+	    },    
+	    {
+		"id" : 5,
+		"title" : "Vice Chairman",
+		"company" : "Facebook" 
+	    },
+	    {
+		"id" : 6,
+		"title" : "Chairman",
+		"company" : "Youtube" 
+	    }
+	]
+
+**index.js**
+
+	let importJSON_Data = require('./exportJSON-data.json');
+
+	console.log(typeof importJSON_Data); // Object
+	console.log(importJSON_Data);
+
+_Horra! we got Object. Here we are not using JSON.parse() method because ES6 has done for us._
