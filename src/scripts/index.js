@@ -32,3 +32,41 @@ let person_Obj = JSON.parse(person_JSON);
 console.log(person_Obj.age);
 console.log(typeof person_Obj);
 
+
+// Now JSON array to Object
+
+let user_Array = `[
+    {
+        "id" : 1,
+        "title" : "Executive",
+        "company" : "Google" 
+    },    
+    {
+        "id" : 2,
+        "title" : "Sr. Executive",
+        "company" : "Facebook" 
+    },
+    {
+        "id" : 3,
+        "title" : "Manager",
+        "company" : "Youtube" 
+    }
+]`
+
+console.log(typeof user_Array); //String
+
+let user_JSON = JSON.parse(user_Array);
+
+console.log(typeof user_JSON);
+console.log(user_JSON[0].title);
+
+
+// Now receive/import JSON data from another file
+
+let importJSON_Data = require('./exportJSON-data.json');
+
+console.log(typeof importJSON_Data); // Object
+console.log(importJSON_Data);
+
+
+
