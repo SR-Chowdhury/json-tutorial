@@ -12,6 +12,10 @@ _2. run_
 **Question: What is JSON & Why?**
 
 _a. JSON is combined of array and object_
+
 _b. Formatted String_
+
 _c. It works with key : value pair_
+
+
 
